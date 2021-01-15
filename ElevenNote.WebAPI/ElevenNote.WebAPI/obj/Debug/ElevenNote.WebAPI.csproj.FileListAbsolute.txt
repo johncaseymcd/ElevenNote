@@ -1,0 +1,2 @@
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.WebAPI\obj\Debug\ElevenNote.WebAPI.csprojAssemblyReference.cache
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.WebAPI\obj\Debug\ElevenNote.WebAPI.csproj.CoreCompileInputs.cache
