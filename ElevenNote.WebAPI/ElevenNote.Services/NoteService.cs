@@ -38,7 +38,7 @@ namespace ElevenNote.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
-                var query = 
+                var query =
                     ctx
                         .Notes
                         .Where(e => e.OwnerID == _userID)
@@ -50,7 +50,9 @@ namespace ElevenNote.Services
                                     Title = e.Title,
                                     CreatedUTC = e.CreatedUTC
                                 }
-                        )
+                        );
+
+                return query.ToArray();
             }
         }
     }
