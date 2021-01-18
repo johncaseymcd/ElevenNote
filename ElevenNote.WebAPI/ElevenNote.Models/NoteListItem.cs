@@ -10,7 +10,7 @@ namespace ElevenNote.Models
 {
     public class NoteListItem
     {
-        public int NoteID { get; set; }
+        public Int32 NoteID { get; set; }
         public string Title { get; set; }
         public Category Category { get; set; }
 

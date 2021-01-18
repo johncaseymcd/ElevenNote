@@ -58,7 +58,7 @@ namespace ElevenNote.Services
             }
         }
 
-        public NoteDetail GetNoteByID(int id)
+        public NoteDetail GetNoteByID(Int32 id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -76,6 +76,29 @@ namespace ElevenNote.Services
                         CreatedUTC = entity.CreatedUTC,
                         ModifiedUTC = entity.ModifiedUTC
                     };
+            }
+        }
+
+        public IEnumerable<NoteListItem> GetNotesByCategory(Int16 categoryID)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var query =
+                    ctx
+                        .Notes
+                        .Where(e => e.OwnerID == _userID && e.Category.CategoryID == categoryID)
+                        .Select(
+                            e =>
+                                new NoteListItem
+                                {
+                                    NoteID = e.NoteID,
+                                    Title = e.Title,
+                                    Category = e.Category,
+                                    CreatedUTC = e.CreatedUTC
+                                }
+                        );
+
+                return query.ToArray();
             }
         }
 
@@ -97,7 +120,7 @@ namespace ElevenNote.Services
             }
         }
 
-        public bool DeleteNote(int noteID)
+        public bool DeleteNote(Int32 noteID)
         {
             using (var ctx = new ApplicationDbContext())
             {

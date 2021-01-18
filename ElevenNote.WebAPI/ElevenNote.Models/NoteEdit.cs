@@ -9,7 +9,7 @@ namespace ElevenNote.Models
 {
     public class NoteEdit
     {
-        public int NoteID { get; set; }
+        public Int32 NoteID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
         public Category Category { get; set; }

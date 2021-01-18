@@ -26,7 +26,7 @@ namespace ElevenNote.WebAPI.Controllers
             return Ok(categories);
         }
 
-        public IHttpActionResult Get(int catID)
+        public IHttpActionResult Get(Int16 catID)
         {
             var categoryService = CreateCategoryService();
             var category = categoryService.GetCategoryByID(catID);
@@ -59,7 +59,7 @@ namespace ElevenNote.WebAPI.Controllers
             return Ok();
         }
 
-        public IHttpActionResult Delete(int catID)
+        public IHttpActionResult Delete(Int16 catID)
         {
             var service = CreateCategoryService();
 

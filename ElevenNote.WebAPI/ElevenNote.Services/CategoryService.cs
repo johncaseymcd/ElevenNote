@@ -56,7 +56,7 @@ namespace ElevenNote.Services
             }
         }
 
-        public CategoryDetail GetCategoryByID(int catID)
+        public CategoryDetail GetCategoryByID(Int16 catID)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -94,7 +94,7 @@ namespace ElevenNote.Services
             }
         }
 
-        public bool DeleteCategory(int categoryID)
+        public bool DeleteCategory(Int16 categoryID)
         {
             using (var ctx = new ApplicationDbContext())
             {
