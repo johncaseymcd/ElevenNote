@@ -12,10 +12,15 @@ namespace ElevenNote.Data
         [Key]
         public int CategoryID { get; set; }
         [Required]
-        public Guid SessionID { get; set; }
+        public Guid OwnerID { get; set; }
         [Required]
         public string Name { get; set; }
         public List<Note> Notes { get; set; }
+
+        [Display(Name = "Created")]
+        public DateTimeOffset CreatedUTC { get; set; }
+        [Display(Name = "Modified")]
+        public DateTimeOffset ModifiedUTC { get; set; }
 
         public Category() { }
 
