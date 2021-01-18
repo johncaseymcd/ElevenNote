@@ -23,7 +23,6 @@ namespace ElevenNote.Services
             {
                 OwnerID = _ownerID,
                 Name = model.Name,
-                Notes = model.Notes,
                 CreatedUTC = DateTimeOffset.Now
             };
 

@@ -10,9 +10,9 @@ namespace ElevenNote.Models
 {
     public class CategoryCreate
     {
+        [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
         [MaxLength(100, ErrorMessage =("Please enter fewer than 100 characters."))]
         public string Name { get; set; }
-        public List<Note> Notes { get; set; }
     }
 }

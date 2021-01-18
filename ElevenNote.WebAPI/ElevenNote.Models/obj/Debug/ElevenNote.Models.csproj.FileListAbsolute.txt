@@ -29,3 +29,6 @@ C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebA
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\obj\Debug\ElevenNote.Models.csproj.CopyComplete
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\obj\Debug\ElevenNote.Models.dll
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\obj\Debug\ElevenNote.Models.pdb
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\ElevenNote.Data.dll
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\ElevenNote.Data.pdb
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\ElevenNote.Data.dll.config
