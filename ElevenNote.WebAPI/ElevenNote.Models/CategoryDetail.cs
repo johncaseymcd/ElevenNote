@@ -1,20 +1,18 @@
 ﻿using ElevenNote.Data;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ElevenNote.Models
 {
-    public class NoteListItem
+    public class CategoryDetail
     {
-        public int NoteID { get; set; }
-        public string Title { get; set; }
-        public Category Category { get; set; }
-
-        [Display(Name="Created")]
+        public int CategoryID { get; set; }
+        public string Name { get; set; }
+        public List<Note> Notes { get; set; }
         public DateTimeOffset CreatedUTC { get; set; }
+        public DateTimeOffset? ModifiedUTC { get; set; }
     }
 }
