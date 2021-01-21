@@ -58,7 +58,7 @@ namespace ElevenNote.Services
             }
         }
 
-        public NoteDetail GetNoteByID(Int32 id)
+        public NoteDetail GetNoteByID(int id)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -79,14 +79,14 @@ namespace ElevenNote.Services
             }
         }
 
-        public IEnumerable<NoteListItem> GetNotesByCategory(Int16 categoryID)
+        public IEnumerable<NoteListItem> GetNotesByCategory(int categoryID)
         {
             using (var ctx = new ApplicationDbContext())
             {
                 var query =
                     ctx
                         .Notes
-                        .Where(e => e.OwnerID == _userID && e.Category.CategoryID == categoryID)
+                        .Where(e => e.OwnerID == _userID && e.CategoryRefID == categoryID)
                         .Select(
                             e =>
                                 new NoteListItem

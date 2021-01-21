@@ -11,7 +11,6 @@ namespace ElevenNote.Models
     {
         public Int16 CategoryID { get; set; }
         public string Name { get; set; }
-        public List<Note> Notes { get; set; }
         public DateTimeOffset ModifiedUTC { get; set; }
     }
 }

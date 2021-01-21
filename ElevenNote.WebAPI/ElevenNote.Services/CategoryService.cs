@@ -21,6 +21,7 @@ namespace ElevenNote.Services
         {
             var entity = new Category
             {
+                //CategoryID = model.CategoryID,
                 OwnerID = _ownerID,
                 Name = model.Name,
                 CreatedUTC = DateTimeOffset.Now
@@ -55,7 +56,7 @@ namespace ElevenNote.Services
             }
         }
 
-        public CategoryDetail GetCategoryByID(Int16 catID)
+        public CategoryDetail GetCategoryByID(int catID)
         {
             using (var ctx = new ApplicationDbContext())
             {
@@ -69,7 +70,6 @@ namespace ElevenNote.Services
                     {
                         CategoryID = entity.CategoryID,
                         Name = entity.Name,
-                        Notes = entity.Notes,
                         CreatedUTC = entity.CreatedUTC,
                         ModifiedUTC = entity.ModifiedUTC
                     };
@@ -86,14 +86,13 @@ namespace ElevenNote.Services
                         .Single(e => e.CategoryID == model.CategoryID && e.OwnerID == _ownerID);
 
                 entity.Name = model.Name;
-                entity.Notes = model.Notes;
                 entity.ModifiedUTC = model.ModifiedUTC;
 
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteCategory(Int16 categoryID)
+        public bool DeleteCategory(int categoryID)
         {
             using (var ctx = new ApplicationDbContext())
             {
