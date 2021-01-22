@@ -33,3 +33,6 @@ C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebA
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Data\obj\Debug\ElevenNote.Data.csproj.CopyComplete
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Data\obj\Debug\ElevenNote.Data.dll
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Data\obj\Debug\ElevenNote.Data.pdb
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.Reset.resources
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Data\obj\Debug\ElevenNote.Data.csproj.GenerateResource.cache
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Data\obj\Debug\ElevenNote.Data.Migrations.AddedDataToNoteAndCategoryTables.resources

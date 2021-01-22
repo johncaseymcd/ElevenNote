@@ -21,7 +21,6 @@ namespace ElevenNote.Services
         {
             var entity = new Category
             {
-                //CategoryID = model.CategoryID,
                 OwnerID = _ownerID,
                 Name = model.Name,
                 CreatedUTC = DateTimeOffset.Now

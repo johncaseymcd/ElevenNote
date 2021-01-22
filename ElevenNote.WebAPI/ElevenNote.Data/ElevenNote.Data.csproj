@@ -86,12 +86,29 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
+    <Compile Include="Migrations\202101220157215_Reset.cs" />
+    <Compile Include="Migrations\202101220157215_Reset.Designer.cs">
+      <DependentUpon>202101220157215_Reset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202101220205071_AddedDataToNoteAndCategoryTables.cs" />
+    <Compile Include="Migrations\202101220205071_AddedDataToNoteAndCategoryTables.Designer.cs">
+      <DependentUpon>202101220205071_AddedDataToNoteAndCategoryTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202101220157215_Reset.resx">
+      <DependentUpon>202101220157215_Reset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202101220205071_AddedDataToNoteAndCategoryTables.resx">
+      <DependentUpon>202101220205071_AddedDataToNoteAndCategoryTables.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -13,6 +13,7 @@ namespace ElevenNote.WebAPI.Controllers
     [Authorize]
     public class NoteController : ApiController
     {
+        [HttpPost]
         private NoteService CreateNoteService()
         {
             var userID = Guid.Parse(User.Identity.GetUserId());
@@ -20,6 +21,7 @@ namespace ElevenNote.WebAPI.Controllers
             return noteService;
         }
 
+        [HttpGet]
         public IHttpActionResult Get()
         {
             NoteService noteService = CreateNoteService();
@@ -28,7 +30,7 @@ namespace ElevenNote.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult GetByNoteID(int id)
+        public IHttpActionResult GetByNoteID([FromUri] int id)
         {
             NoteService noteService = CreateNoteService();
             var note = noteService.GetNoteByID(id);
@@ -36,14 +38,15 @@ namespace ElevenNote.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult GetByCategoryID(int catID)
+        public IHttpActionResult GetByCategoryID([FromUri] int catID)
         {
             NoteService noteService = CreateNoteService();
             var notes = noteService.GetNotesByCategory(catID);
             return Ok(notes);
         }
 
-        public IHttpActionResult Post(NoteCreate note)
+        [HttpPost]
+        public IHttpActionResult Post([FromBody] NoteCreate note)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -56,7 +59,8 @@ namespace ElevenNote.WebAPI.Controllers
             return Ok();
         }
 
-        public IHttpActionResult Put(NoteEdit note)
+        [HttpPut]
+        public IHttpActionResult Put([FromBody] NoteEdit note)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -69,7 +73,8 @@ namespace ElevenNote.WebAPI.Controllers
             return Ok();
         }
 
-        public IHttpActionResult Delete(int id)
+        [HttpDelete]
+        public IHttpActionResult Delete([FromUri] int id)
         {
             var service = CreateNoteService();
 

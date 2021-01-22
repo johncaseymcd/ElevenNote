@@ -10,10 +10,10 @@ namespace ElevenNote.Models
 {
     public class NoteDetail
     {
-        public Int32 NoteID { get; set; }
+        public int NoteID { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public Category Category { get; set; }
+        public int CategoryID { get; set; }
 
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUTC { get; set; }

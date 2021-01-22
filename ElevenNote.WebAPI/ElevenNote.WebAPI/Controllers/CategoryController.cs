@@ -12,6 +12,7 @@ namespace ElevenNote.WebAPI.Controllers
 {
     public class CategoryController : ApiController
     {
+        [HttpPost]
         private CategoryService CreateCategoryService()
         {
             var ownerID = Guid.Parse(User.Identity.GetUserId());
@@ -28,7 +29,7 @@ namespace ElevenNote.WebAPI.Controllers
         }
 
         [HttpGet]
-        public IHttpActionResult Get(int catID)
+        public IHttpActionResult Get([FromUri] int catID)
         {
             var categoryService = CreateCategoryService();
             var category = categoryService.GetCategoryByID(catID);
@@ -36,7 +37,7 @@ namespace ElevenNote.WebAPI.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Post(CategoryCreate category)
+        public IHttpActionResult Post([FromBody] CategoryCreate category)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -50,7 +51,7 @@ namespace ElevenNote.WebAPI.Controllers
         }
 
         [HttpPut]
-        public IHttpActionResult Put(CategoryEdit category)
+        public IHttpActionResult Put([FromBody] CategoryEdit category)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
@@ -64,7 +65,7 @@ namespace ElevenNote.WebAPI.Controllers
         }
 
         [HttpDelete]
-        public IHttpActionResult Delete(int id)
+        public IHttpActionResult Delete([FromUri] int id)
         {
             var service = CreateCategoryService();
 

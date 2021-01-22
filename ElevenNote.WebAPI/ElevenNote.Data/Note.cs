@@ -19,9 +19,7 @@ namespace ElevenNote.Data
         [Required]
         public string Content { get; set; }
 
-        [ForeignKey("Category")]
-        public int CategoryRefID { get; set; }
-        public Category Category { get; set; }
+        public int CategoryID { get; set; }
 
         [Required]
         public DateTimeOffset CreatedUTC { get; set; }

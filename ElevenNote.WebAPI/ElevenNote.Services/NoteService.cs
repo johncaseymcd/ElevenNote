@@ -24,7 +24,7 @@ namespace ElevenNote.Services
                 OwnerID = _userID,
                 Title = model.Title,
                 Content = model.Content,
-                Category = model.Category,
+                CategoryID = model.CategoryID,
                 CreatedUTC = DateTimeOffset.Now
             };
 
@@ -49,7 +49,7 @@ namespace ElevenNote.Services
                                 {
                                     NoteID = e.NoteID,
                                     Title = e.Title,
-                                    Category = e.Category,
+                                    CategoryID = e.CategoryID,
                                     CreatedUTC = e.CreatedUTC
                                 }
                         );
@@ -72,7 +72,7 @@ namespace ElevenNote.Services
                         NoteID = entity.NoteID,
                         Title = entity.Title,
                         Content = entity.Content,
-                        Category = entity.Category,
+                        CategoryID = entity.CategoryID,
                         CreatedUTC = entity.CreatedUTC,
                         ModifiedUTC = entity.ModifiedUTC
                     };
@@ -86,14 +86,14 @@ namespace ElevenNote.Services
                 var query =
                     ctx
                         .Notes
-                        .Where(e => e.OwnerID == _userID && e.CategoryRefID == categoryID)
+                        .Where(e => e.OwnerID == _userID && e.CategoryID == categoryID)
                         .Select(
                             e =>
-                                new NoteListItem
+                               new NoteListItem
                                 {
                                     NoteID = e.NoteID,
                                     Title = e.Title,
-                                    Category = e.Category,
+                                    CategoryID = e.CategoryID,
                                     CreatedUTC = e.CreatedUTC
                                 }
                         );
@@ -113,14 +113,14 @@ namespace ElevenNote.Services
 
                 entity.Title = model.Title;
                 entity.Content = model.Content;
-                entity.Category = model.Category;
+                entity.CategoryID = model.CategoryID;
                 entity.ModifiedUTC = model.ModifiedUTC;
 
                 return ctx.SaveChanges() == 1;
             }
         }
 
-        public bool DeleteNote(Int32 noteID)
+        public bool DeleteNote(int noteID)
         {
             using (var ctx = new ApplicationDbContext())
             {
