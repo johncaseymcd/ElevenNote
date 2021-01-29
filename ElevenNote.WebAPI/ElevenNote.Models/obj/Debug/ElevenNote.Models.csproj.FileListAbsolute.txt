@@ -32,3 +32,8 @@ C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebA
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\ElevenNote.Data.dll
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\ElevenNote.Data.pdb
 C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\ElevenNote.Data.dll.config
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\Microsoft.Owin.Cors.dll
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\System.Web.Cors.dll
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\System.Web.Http.Cors.dll
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\Microsoft.Owin.Cors.xml
+C:\Users\johnc\OneDrive\Documents\ElevenFiftyProjects\ElevenNote\ElevenNote.WebAPI\ElevenNote.Models\bin\Debug\System.Web.Http.Cors.xml
